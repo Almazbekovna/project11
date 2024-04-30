@@ -1,0 +1,344 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--b24-primary-color: rgba(0, 181, 51, 1);
+	--b24-primary-hover-color: rgba(0, 181, 51, 0.7);
+	--accent: orange;
+	--text: #333;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: roboto-st, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+@font-face {
+	font-family: 'GilroyLight';
+	src: url(../fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+	font-family: 'GilroyExtra';
+	src: url(../fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+	font-family: 'Circural';
+	src: url(../fonts/circular-std-medium-500.ttf);
+}
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
+
+/* FONTS LOAD SECTION */
+
+@font-face { src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: italic; }
+@font-face { src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: normal; }
+@font-face { src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: italic; }
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+/* GENERAL CSS SETTINGS */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+*{
+	margin: 0 auto;
+}
+.fi-br-search:hover,
+.fi-sr-shopping-bag:hover,
+.fi-br-bars-staggered:hover {
+	color: #5199FF;
+	transition: .3s ease;
+}
+
+.container{
+	width: 1224.998px;
+	height: 727.22px;
+}
+.nav_icons > a{
+	text-decoration: none;
+	color: #333;
+}
+.nav_menu{
+	display: flex;
+	align-items: center;
+}
+.logo{
+	font-size: 24px;
+}
+.fi-br-search,
+.fi-sr-shopping-bag , 
+.fi-br-bars-staggered{
+	font-size: 24px;
+	padding: 0 0 0 30px	;
+}
+.description {
+	font-family: math;
+	font-weight: bold;
+	color: var(--accent);
+}
+.desc{
+	font-family: math;
+    font-weight: bold;
+	color: var(--accent);
+}
+.desc::before{
+	content: '__ ';
+}
+.p_food, 
+.p_mood {
+    color: #232323;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 108px;
+    font-family: system-ui;
+}
+
+.p_food::before{
+    content: "";
+    position: absolute;
+    top: 255px;
+    left: 565px;
+    width: 62px;
+    height: 62px;
+    background-image: url('../images/8dGEbVd2O4-removebg-preview\ 4.svg');
+    background-size: cover;
+    z-index: -1;
+}
+.p_food::after{
+    content: "";
+    position: absolute;
+    top: 255px;
+    left: 625px;
+    width: 62px;
+    height: 62px;
+    background-image: url('../images/8dGEbVd2O4-removebg-preview\ 5.svg');
+	background-size: cover;
+}
+.p_mood::before{
+    content: "";
+    position: absolute;
+    top: 370px;
+    left: 600px;
+    width: 62px;
+    height: 62px;
+    background-image: url('../images/vaadin_smiley-o.svg');
+    background-size: cover;
+    z-index: -1;
+}
+.p_mood::after{
+    content: "";
+    position: absolute;
+    top: 370px;
+    left: 670px;
+    width: 62px;
+    height: 62px;
+    background-image: url('../images/vaadin_smiley-o.svg');
+    background-size: cover;
+}
+.p_text {
+	color: #3F3232;
+	font-family: 'Circural';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 160%; /* 32px */
+}
+.btn{
+	width: 243px;
+	height: 62px;
+	border: unset;
+	border-radius: 31px;
+	background: #FF9401;
+	color: #FFF;
+	font-family: 'roboto-st';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px; /* 150% */
+}
+.container_content{
+	display: flex;
+}
+.card {
+	width: 350px;
+	height: 350px;
+	transition: all 0.2s;
+	position: relative;
+	cursor: pointer;
+  }
+  
+  .card-inner {
+	width: inherit;
+	height: inherit;
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	backdrop-filter: blur(10px);
+	border-radius: 50%;
+	background-image: url('../images/8dGEbVd2O4-removebg-preview\ 4.svg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+  }
+  
+  .card:hover {
+	transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle {
+	width: 100px;
+	height: 100px;
+	background: radial-gradient(#b0e633, #53ef7d);
+	border-radius: 50%;
+	position: absolute;
+	animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+	top: -25px;
+	left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+	bottom: -25px;
+	right: -25px;
+	animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+	to {
+	  transform: translateY(-10px);
+	}
+  }
+  
+  @keyframes move-down1 {
+	to {
+	  transform: translateY(10px);
+	}
+  }
+  button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	background-color: #FF9401;
+	padding: 1em 2em;
+	border: none;
+	border-radius: 31px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+  }
+  
+  button span:not(:nth-child(6)) {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: 50%;
+	width: 50%;
+	background-color: #5199FF;
+	border-radius: 50%;
+	transition: .6s ease;
+  }
+  
+  button span:nth-child(6) {
+	position: relative;
+  }
+  
+  button span:nth-child(1) {
+	transform: translate(-3.3em, -5em);
+  }
+  
+  button span:nth-child(2) {
+	transform: translate(-6em, 2.3em);
+  }
+  
+  button span:nth-child(3) {
+	transform: translate(-.2em, 2.8em);
+  }
+  
+  button span:nth-child(4) {
+	transform: translate(3.5em, 2.4em);
+  }
+  
+  button span:nth-child(5) {
+	transform: translate(3.5em, -4.8em);
+  }
+  
+  button:hover span:not(:nth-child(6)) {
+	transform: translate(-50%, -50%) scale(4);
+	transition: 1.5s ease;
+	background-color: #000;
+	color: #fff;
+  }
+  .social-links{
+	display: flex;
+	position: absolute;
+	top: 555px;
+		left: 40%;
+  }
+  .social-links a{
+	text-decoration: none;
+	color: unset;
+	margin-left: 50px;
+  }
+  .link-facebook,
+  .link-instagram,
+  .link-twitter{
+	font-size: 30px;
+  }
+.link-facebook:hover,
+.link-instagram:hover,
+.link-twitter:hover{
+	color: #5199FF;
+	transition: .5s ease
+}
+.container-first {
+	width: 1520px;
+	height: 459.22px;
+	background: linear-gradient(180deg, rgba(255, 148, 1, 0.05) 0%, rgba(255, 237, 211, 0.00) 100%);
+}
+
+.container-first {
+	display: flex;
+	align-items: center;
+}
+
+.section-items,
+.section-text {
+	width: 40%;
+	height: 60%;
+}
+
+.section-items img {
+	width: 90vh;
+	position: absolute;
+	top: 88vh;
+}
+
+.slogan {
+	color: #2E2E2E;
+	font-family: 'GilroyExtra';
+	font-size: 52px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 60px;
+}
